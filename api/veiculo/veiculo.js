@@ -15,9 +15,7 @@ var veiculoSchema = new mongoose.Schema({
     revisoes: [revisaoSchema]
 })
 
-// const veiculo = mongoose.model('veiculo', veiculoSchema)
-// const revisao = mongoose.model('revisao', revisaoSchema)
+const veiculo = mongoose.model('veiculo', veiculoSchema)
+const revisao = mongoose.model('revisao', revisaoSchema)
 
-// module.exports = {veiculo, revisao}
-
-module.exports = mongoose.model('veiculo', veiculoSchema)
+module.exports = {veiculo, revisao}

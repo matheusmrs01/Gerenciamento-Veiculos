@@ -12,15 +12,11 @@ module.exports = function(server){
     api.get('/find-veiculo/:placa', veiculoService.findOne_veiculo) //ok
     api.get('/find-veiculos', veiculoService.find_veiculos) //ok
     api.get('/find-veiculos/:filtro', veiculoService.find_veiculos_for_filter) //ok
-    api.put('/update-veiculo/:placa', veiculoService.update_veiculo)
+    api.put('/update-veiculo/:placa', veiculoService.update_veiculo) //ok
     api.delete('/delete-veiculo/:placa', veiculoService.delete_veiculo) //ok
 
-    /* 
-    Adicionar: {
+    //Rotas referente a revisão
+    api.put('/add-revisao/:placa', veiculoService.push_revisao) //ok
+    api.get('/gasto-veiculos/:filtro', veiculoService.aggregate_veiculos_filtro) //ok
 
-        Adicionar Revisão pela placa
-        Consultar Total de gasto em revisões do veículo pela placa
-        Consultar Total de gasto em revisões do veículo pela marca
-    }
-    */
 }
